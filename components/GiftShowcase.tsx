@@ -27,10 +27,10 @@ const GiftShowcase: React.FC = () => {
                 <p className="text-sm text-gray-600">{item.description}</p>
               </div>
               
-              {/* Insert Native Ad after item 4 */}
+              {/* Insert 300x250 Ad after item 4 (Index 3) */}
               {index === 3 && (
-                <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-1">
-                   <AdBanner format="native" className="h-full rounded-xl" />
+                <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-1 flex items-center justify-center p-4 bg-gray-50 rounded-xl border border-gray-100">
+                   <AdBanner format="banner-300x250" className="rounded-lg shadow-sm" />
                 </div>
               )}
             </React.Fragment>

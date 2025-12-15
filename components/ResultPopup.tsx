@@ -17,8 +17,8 @@ const ResultPopup: React.FC<ResultPopupProps> = ({ isOpen, onClose, onSpinAgain 
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm" onClick={onClose}></div>
       
-      {/* Modal */}
-      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 animate-bounce-slow transform transition-all border-4 border-christmas-red">
+      {/* Modal - Increased max-width to lg (32rem/512px) to fit 468px ad */}
+      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg p-6 animate-bounce-slow transform transition-all border-4 border-christmas-red overflow-hidden">
         <button 
           onClick={onClose} 
           className="absolute top-2 right-2 p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors z-10"
@@ -39,8 +39,8 @@ const ResultPopup: React.FC<ResultPopupProps> = ({ isOpen, onClose, onSpinAgain 
             Don’t worry! Christmas magic is all about joy & fun 🎄. Give it another shot!
           </p>
 
-          <div className="w-full mb-6">
-            <AdBanner format="native" label={true} />
+          <div className="w-full mb-6 flex justify-center overflow-x-auto">
+            <AdBanner format="banner-468x60" label={true} />
           </div>
 
           <div className="flex flex-col w-full gap-3">

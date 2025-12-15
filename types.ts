@@ -11,7 +11,7 @@ export interface GiftItem {
 }
 
 export interface AdProps {
-  format: 'banner-728x90' | 'banner-320x50' | 'native' | 'social-bar';
+  format: 'banner-728x90' | 'banner-320x50' | 'banner-300x250' | 'banner-468x60' | 'native' | 'social-bar';
   className?: string;
   label?: boolean;
 }
