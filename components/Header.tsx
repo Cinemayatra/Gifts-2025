@@ -1,6 +1,7 @@
 import React from 'react';
 import { Gift } from 'lucide-react';
 import AdBanner from './AdBanner';
+import ShareButton from './ShareButton';
 import { Page } from '../types';
 
 interface HeaderProps {
@@ -21,16 +22,23 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
           </h1>
         </div>
         
-        <nav className="flex gap-6 text-sm font-semibold uppercase tracking-wide">
+        <nav className="flex items-center gap-4 md:gap-6 text-sm font-semibold uppercase tracking-wide">
           <button onClick={() => onNavigate('home')} className="hover:text-christmas-gold transition-colors">
             Home
           </button>
           <button onClick={() => onNavigate('home', 'gifts')} className="hover:text-christmas-gold transition-colors">
             Gifts
           </button>
-          <button onClick={() => onNavigate('home', 'how-it-works')} className="hover:text-christmas-gold transition-colors">
+          <button onClick={() => onNavigate('home', 'how-it-works')} className="hover:text-christmas-gold transition-colors whitespace-nowrap">
             How it Works
           </button>
+          
+          <div className="w-px h-6 bg-white/30 hidden md:block"></div>
+          
+          <ShareButton 
+            variant="icon" 
+            className="text-white hover:text-christmas-gold hover:bg-white/10" 
+          />
         </nav>
       </div>
 
